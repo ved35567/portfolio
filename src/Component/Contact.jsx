@@ -11,7 +11,7 @@ const Contact = () => {
           <p className="about-me">Front-end Developer / UI Designer</p>
         </div>
         <div className="section-two">
-          <img className="my-image" src="/Images/image 17.png" alt="" />
+          <img className="my-image" src="/Images/ved.png" alt="" />
         </div>
       </div>
     </div>
