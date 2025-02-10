@@ -230,19 +230,62 @@ function App() {
               src="/Images/separatorBlack 1.png"
               alt="seprator"
             />
-            <div className="form-container">
-              <form action="#">
-                <input type="text" required placeholder="ENTER YOUR NAME*" />
 
-                <input type="email" required placeholder="ENTER YOUR EMAIL*" />
+            <motion.div
+              className="form-container"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: false }}
+            >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
+                <form action="#">
+                  {/* Name Input */}
+                  <motion.input
+                    type="text"
+                    required
+                    placeholder="ENTER YOUR NAME*"
+                    whileFocus={{ scale: 1.02 }}
+                  />
 
-                <input type="tel" placeholder="PHONE NUMBER" />
+                  {/* Email Input */}
+                  <motion.input
+                    type="email"
+                    required
+                    placeholder="ENTER YOUR EMAIL*"
+                    whileFocus={{ scale: 1.02 }}
+                  />
 
-                <textarea required placeholder="YOUR MESSAGE*"></textarea>
+                  {/* Phone Input */}
+                  <motion.input
+                    type="tel"
+                    placeholder="PHONE NUMBER"
+                    whileFocus={{ scale: 1.02 }}
+                  />
 
-                <button type="submit">SUBMIT</button>
-              </form>
-            </div>
+                  {/* Message Input */}
+                  <motion.textarea
+                    required
+                    placeholder="YOUR MESSAGE*"
+                    rows="4"
+                    whileFocus={{ scale: 1.02 }}
+                  />
+
+                  {/* Submit Button */}
+                  <motion.button
+                    type="submit"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    SUBMIT
+                  </motion.button>
+                </form>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
